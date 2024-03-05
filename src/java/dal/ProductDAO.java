@@ -10,16 +10,40 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 /**
  *
  * @author Admin
  */
 public class ProductDAO extends DBContext {
-
-    public List<Product> getAllProduct() {
+// Before
+//    public List<Product> getAllProduct() {
+//        List<Product> list = new ArrayList<>();
+//        String sql = "select * from Product";
+//        try {
+//            PreparedStatement ps = con.prepareStatement(sql);
+//            ResultSet rs = ps.executeQuery();
+//            while (rs.next()) {
+//                list.add(new Product(rs.getInt(1),
+//                        rs.getString(2),
+//                        rs.getString(3),
+//                        rs.getDouble(4),
+//                        rs.getString(5),
+//                        rs.getString(6)));
+//            }
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//        return list;
+//    }
+    
+//     After
+     public List<Product> getAllProduct() {
         List<Product> list = new ArrayList<>();
         String sql = "select * from Product";
+        Logger logger = Logger.getLogger(getClass().getName());
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -31,8 +55,8 @@ public class ProductDAO extends DBContext {
                         rs.getString(5),
                         rs.getString(6)));
             }
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "An error occurred while fetching products from the database", e);
         }
         return list;
     }
@@ -250,13 +274,13 @@ public class ProductDAO extends DBContext {
         }
         return list;
     }
-    public static void main(String[] args) {
-        ProductDAO pdb = new ProductDAO();
-        List<Product> p = pdb.pagingProduct(1);
-        for (Product product : p) {
-            System.out.println(product.getName());
-        }
-    }
+//    public static void main(String[] args) {
+//        ProductDAO pdb = new ProductDAO();
+//        List<Product> p = pdb.pagingProduct(1);
+//        for (Product product : p) {
+//            System.out.println(product.getName());
+//        }
+//    }
 
     public List<Product> getAllAndIndex(int id, int indexPage) {
         List<Product> list = new ArrayList<>();
