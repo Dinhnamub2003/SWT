@@ -19,28 +19,49 @@ import entity.Product;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DAO extends DBContext {
 
-    public List<SoLuongDaBan> getTop10SanPhamBanChay() {
-        List<SoLuongDaBan> list = new ArrayList<>();
-        String sql = "select top(10) *\r\n"
-                + "from SoLuongDaBan\r\n"
-                + "order by soLuongDaBan desc";
-        try {
-            PreparedStatement ps = con.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                list.add(new SoLuongDaBan(rs.getInt(1),
-                        rs.getInt(2)
-                ));
-            }
-        } catch (Exception e) {
+   public List<SoLuongDaBan> getTop10SanPhamBanChay() {
+    List<SoLuongDaBan> list = new ArrayList<>();
+    String sql = "select top(10) *\r\n"
+            + "from SoLuongDaBan\r\n"
+            + "order by soLuongDaBan desc";
+    PreparedStatement ps = null;
+    ResultSet rs = null;
+    try {
+        ps = con.prepareStatement(sql);
+        rs = ps.executeQuery();
+        while (rs.next()) {
+            list.add(new SoLuongDaBan(rs.getInt(1),
+                    rs.getInt(2)
+            ));
         }
-        return list;
+    } catch (SQLException e) {
+        e.printStackTrace(); // Handle the exception appropriately
+    } finally {
+        // Close resources in the finally block
+        if (rs != null) {
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                e.printStackTrace(); // Handle the exception appropriately
+            }
+        }
+        if (ps != null) {
+            try {
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace(); // Handle the exception appropriately
+            }
+        }
     }
+    return list;
+}
+
 
     public List<Invoice> getAllInvoice() {
         List<Invoice> list = new ArrayList<>();
