@@ -12,10 +12,9 @@ import entity.Review;
 import entity.SoLuongDaBan;
 import entity.TongChiTieuBanHang;
 import entity.Supplier;
-//import entity.Account;
+
 import entity.Category;
 import entity.Invoice;
-import entity.Product;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,43 +24,42 @@ import java.util.List;
 
 public class DAO extends DBContext {
 
-   public List<SoLuongDaBan> getTop10SanPhamBanChay() {
-    List<SoLuongDaBan> list = new ArrayList<>();
-    String sql = "select top(10) *\r\n"
-            + "from SoLuongDaBan\r\n"
-            + "order by soLuongDaBan desc";
-    PreparedStatement ps = null;
-    ResultSet rs = null;
-    try {
-        ps = con.prepareStatement(sql);
-        rs = ps.executeQuery();
-        while (rs.next()) {
-            list.add(new SoLuongDaBan(rs.getInt(1),
-                    rs.getInt(2)
-            ));
-        }
-    } catch (SQLException e) {
-        e.printStackTrace(); // Handle the exception appropriately
-    } finally {
-        // Close resources in the finally block
-        if (rs != null) {
-            try {
-                rs.close();
-            } catch (SQLException e) {
-                e.printStackTrace(); // Handle the exception appropriately
+    public List<SoLuongDaBan> getTop10SanPhamBanChay() {
+        List<SoLuongDaBan> list = new ArrayList<>();
+        String sql = "select top(10) *\r\n"
+                + "from SoLuongDaBan\r\n"
+                + "order by soLuongDaBan desc";
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new SoLuongDaBan(rs.getInt(1),
+                        rs.getInt(2)
+                ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // Handle the exception appropriately
+        } finally {
+            // Close resources in the finally block
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    e.printStackTrace(); // Handle the exception appropriately
+                }
+            }
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    e.printStackTrace(); // Handle the exception appropriately
+                }
             }
         }
-        if (ps != null) {
-            try {
-                ps.close();
-            } catch (SQLException e) {
-                e.printStackTrace(); // Handle the exception appropriately
-            }
-        }
+        return list;
     }
-    return list;
-}
-
 
     public List<Invoice> getAllInvoice() {
         List<Invoice> list = new ArrayList<>();
@@ -507,7 +505,25 @@ public class DAO extends DBContext {
         return null;
     }
 
-    public Account checkAccountExistByUsernameAndEmail(String username, String email) {
+    public boolean checkAccountExistByUsernameAndEmail(String username, String email) {
+        String sql = "select count(*) from Account where [user]=? and [email]=?";
+        try {
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, username);
+            ps.setString(2, email);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                return count > 0; // Trả về true nếu có bản ghi khớp và false nếu không có
+            }
+        } catch (Exception e) {
+            // Xử lý ngoại lệ nếu cần thiết
+            System.out.println(e);
+        }
+        return false; // Trả về false nếu có lỗi xảy ra hoặc không có bản ghi khớp
+    }
+
+    public Account checkAccountExistByUsernameAndEmail2(String username, String email) {
         String sql = "select * from Account where [user]=? and [email]=?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -522,7 +538,8 @@ public class DAO extends DBContext {
                         rs.getInt(5),
                         rs.getString(6));
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
+            System.out.println(e);
         }
         return null;
     }
@@ -547,7 +564,7 @@ public class DAO extends DBContext {
         return null;
     }
 
-    public void singup(String user, String pass, String email) {
+    public boolean signup(String user, String pass, String email) {
         String sql = "insert into Account\n"
                 + "values(?,?,0,0,?)";
         try {
@@ -556,7 +573,10 @@ public class DAO extends DBContext {
             ps.setString(2, pass);
             ps.setString(3, email);
             ps.executeUpdate();
-        } catch (Exception e) {
+            return true;
+        } catch (SQLException e) {
+            System.out.println(e);
+            return false;
         }
     }
 
@@ -858,7 +878,5 @@ public class DAO extends DBContext {
         } catch (Exception e) {
         }
     }
-
-   
 
 }

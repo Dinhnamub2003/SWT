@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Project_Ban_Che.iml" filepath="$PROJECT_DIR$/.idea/Project_Ban_Che.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Project_Ban_Che.iml" filepath="$PROJECT_DIR$/src/Project_Ban_Che.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/java/Project_Ban_Che1.iml" filepath="$PROJECT_DIR$/src/java/Project_Ban_Che1.iml" />
     </modules>
   </component>
 </project>

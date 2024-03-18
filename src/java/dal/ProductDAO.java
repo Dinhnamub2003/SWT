@@ -19,7 +19,7 @@ import java.util.logging.Level;
  */
 public class ProductDAO extends DBContext {
 
-     public List<Product> getAllProduct() {
+    public List<Product> getAllProduct() {
         List<Product> list = new ArrayList<>();
         String sql = "select * from Product";
         Logger logger = Logger.getLogger(getClass().getName());
@@ -63,7 +63,7 @@ public class ProductDAO extends DBContext {
         return list;
     }
 
-    public int countAllProductBySellID( ) {
+    public int countAllProductBySellID() {
         String sql = "select count(*) from Product ";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -239,7 +239,7 @@ public class ProductDAO extends DBContext {
                 + "OFFSET ? ROWS FETCH NEXT 5 ROWS ONLY;";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, (id-1)*5);
+            ps.setInt(1, (id - 1) * 5);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 list.add(new Product(rs.getInt(1),
@@ -253,7 +253,6 @@ public class ProductDAO extends DBContext {
         }
         return list;
     }
-
 
     public List<Product> getAllAndIndex(int id, int indexPage) {
         List<Product> list = new ArrayList<>();
@@ -442,7 +441,8 @@ public class ProductDAO extends DBContext {
                         rs.getString(5),
                         rs.getString(6));
             }
-        } catch (Exception e) {
+        } catch (SQLException e) {
+            System.out.println(e);
         }
         return null;
     }
@@ -530,21 +530,22 @@ public class ProductDAO extends DBContext {
         }
     }
 
-    public void insertProduct(String name, String image, String price,
-            String title, String description, String category, int sid) {
-        String sql = "INSERT INTO Product (name, image, price, title, description, cateID, sell_ID) "
-                + "VALUES (?, ?, ?, ?, ?, ?, ?)";
-        try ( PreparedStatement ps = con.prepareStatement(sql)) {
-            ps.setString(1, name);
-            ps.setString(2, image);
-            ps.setString(3, price);
-            ps.setString(5, description);
-            ps.setString(4, title);
-            ps.setString(6, category);
-            ps.setInt(7, sid);
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e);
+    public void insertProduct(String name, String image, String price, String title, String description, String category, int sid) {
+        if (name != null && image != null && Double.parseDouble(price) > 0 && title != null && description != null && Integer.parseInt(category) > 0 && Integer.parseInt(category) < 4) {
+            String sql = "INSERT INTO Product (name, image, price, title, description, cateID, sell_ID) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?)";
+            try ( PreparedStatement ps = con.prepareStatement(sql)) {
+                ps.setString(1, name);
+                ps.setString(2, image);
+                ps.setString(3, price);
+                ps.setString(5, description);
+                ps.setString(4, title);
+                ps.setString(6, category);
+                ps.setInt(7, sid);
+                ps.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println(e);
+            }
         }
     }
 
@@ -591,7 +592,7 @@ public class ProductDAO extends DBContext {
         }
         return null;
     }
-    
+
     public List<Product> getProductBySellId(int id) {
         List<Product> list = new ArrayList<>();
         String sql = "select * from product "
@@ -615,8 +616,8 @@ public class ProductDAO extends DBContext {
         }
         return list;
     }
-    
-     public List<Product> getProductByPrice() {
+
+    public List<Product> getProductByPrice() {
         List<Product> list = new ArrayList<>();
         String sql = "SELECT * FROM Product\n"
                 + "ORDER BY price ASC";
@@ -624,7 +625,7 @@ public class ProductDAO extends DBContext {
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                    list.add(new Product(rs.getInt(1),
+                list.add(new Product(rs.getInt(1),
                         rs.getString(2),
                         rs.getString(3),
                         rs.getDouble(4),

@@ -1011,7 +1011,7 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.poi-ooxml-4.0.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.poi-ooxml-schemas-4.0.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.xmlbeans-3.0.2.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.junit-4.13.2-javadoc.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+       
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>

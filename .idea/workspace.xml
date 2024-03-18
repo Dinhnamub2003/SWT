@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1bfe5b44-22fc-4d76-bcae-e483a0f359c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Project_Ban_Che.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/Cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/Cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/SendEmail$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/context/DBContext.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddAccountControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddAccountControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddAmountCartControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddAmountCartControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddCartControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddCartControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddReviewControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddReviewControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddSupplierControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/AddSupplierControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/CategoryControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/CategoryControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/CategoryShopControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/CategoryShopControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DeleteAccountControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DeleteAccountControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DeleteCartControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DeleteCartControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DeleteControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DeleteControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DeleteSupplierControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DeleteSupplierControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DetailControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DetailControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DoanhThuTheoThangControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DoanhThuTheoThangControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DoanhThuTheoThuControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/DoanhThuTheoThuControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/EditControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/EditControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/EditProfileControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/EditProfileControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ForgotPasswordControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ForgotPasswordControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/HoaDonControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/HoaDonControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/HomeControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/HomeControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadAmountCartControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadAmountCartControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadMoreCheControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadMoreCheControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadMoreControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadMoreControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadMoreTraControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoadMoreTraControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LogOutControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LogOutControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoginControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/LoginControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/MailServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/MailServlet$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/MailServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/MailServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ManagerAccountControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ManagerAccountControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ManagerCartControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ManagerCartControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ManagerControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ManagerControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ManagerSupplierControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ManagerSupplierControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/OrderControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/OrderControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchAjaxPrice20To25ShopControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchAjaxPrice20To25ShopControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchAjaxPriceAbove25ShopControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchAjaxPriceAbove25ShopControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchAjaxPriceMinToMaxShopControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchAjaxPriceMinToMaxShopControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchAjaxPriceUnder20ShopControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchAjaxPriceUnder20ShopControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchByAjax.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchByAjax.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchByAjaxHoaDon.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchByAjaxHoaDon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchByAjaxShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchByAjaxShop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SearchControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ShopControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/ShopControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SignUpControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SignUpControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SortByPriceControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SortByPriceControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/StatisticControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/StatisticControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SubAmountCartControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/SubAmountCartControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/Top10SanPhamControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/Top10SanPhamControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/Top5KhachHangControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/Top5KhachHangControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/Top5NhanVienControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/Top5NhanVienControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/TotalMoneyCartControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/TotalMoneyCartControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelAccountControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelAccountControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelProductControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelProductControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelSupplierControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelSupplierControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelTop10ProductControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelTop10ProductControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelTop5CustomerControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelTop5CustomerControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelTop5EmployeeControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/control/XuatExcelTop5EmployeeControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/dal/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/dal/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/dal/DBContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/dal/DBContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/dal/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/dal/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Email.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Email.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/EmailUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/EmailUtils$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/EmailUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/EmailUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Invoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Invoice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/SoLuongDaBan.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/SoLuongDaBan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Supplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/Supplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/TongChiTieuBanHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/entity/TongChiTieuBanHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web/WEB-INF/lib/junit-4.13.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/control/OrderControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/control/OrderControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/dal/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/dal/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Cart.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2dSCJF2JpbXL5HV7ZYXKHxp8Ysz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/ElaTrading21",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bfe5b44-22fc-4d76-bcae-e483a0f359c1" name="Changes" comment="" />
+      <created>1709992022451</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709992022451</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -45,69 +45,82 @@ public class OrderControl extends HttpServlet {
         }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        Account a = (Account) session.getAttribute("acc");
-        if (a == null) {
-            response.sendRedirect("login");
-            return;
-        }
-        int accountID = a.getId();
-        DAO dal = new DAO();
-        ProductDAO d = new ProductDAO();
-        List<Cart> list = dal.getCartByAccountID(accountID);
-        List<Product> list2 = d.getAllProduct();
-        double totalMoney = 0;
-        for (Cart c : list) {
-            for (Product p : list2) {
-                if (c.getProductID() == p.getId()) {
-                    totalMoney = totalMoney + (p.getPrice() * c.getAmount());
-                }
-            }
-        }
-        double totalMoneyVAT = totalMoney + totalMoney * 0.1;
-
-        double tongTienBanHangThem = 0;
-        int sell_ID;
-        for (Cart c : list) {
-            for (Product p : list2) {
-                if (c.getProductID() == p.getId()) {
-                    tongTienBanHangThem = 0;
-                    sell_ID = d.getSellIDByProductID(p.getId());
-                    tongTienBanHangThem = tongTienBanHangThem + (p.getPrice() * c.getAmount());
-                    TongChiTieuBanHang t2 = dal.checkTongChiTieuBanHangExist(sell_ID);
-                    if (t2 == null) {
-                        dal.insertTongChiTieuBanHang(sell_ID, 0, tongTienBanHangThem);
-                    } else {
-                        dal.editTongBanHang(sell_ID, tongTienBanHangThem);
-                    }
-                }
-            }
-        }
-
-        for (Cart c : list) {
-            for (Product p : list2) {
-                if (c.getProductID() == p.getId()) {
-                    SoLuongDaBan s = dal.checkSoLuongDaBanExist(p.getId());
-                    if (s == null) {
-                        dal.insertSoLuongDaBan(p.getId(), c.getAmount());
-                    } else {
-                        dal.editSoLuongDaBan(p.getId(), c.getAmount());
-                    }
-                }
-            }
-        }
-
-        dal.insertInvoice(accountID, totalMoneyVAT);
-        TongChiTieuBanHang t = dal.checkTongChiTieuBanHangExist(accountID);
-        if (t == null) {
-            dal.insertTongChiTieuBanHang(accountID, totalMoneyVAT, 0);
-        } else {
-            dal.editTongChiTieu(accountID, totalMoneyVAT);
-        }
-
-        request.getRequestDispatcher("DatHang.jsp").forward(request, response);
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    HttpSession session = request.getSession();
+    Account account = (Account) session.getAttribute("acc");
+    if (account == null) {
+        response.sendRedirect("login");
+        return;
     }
+    int accountID = account.getId();
+    DAO dao = new DAO();
+    ProductDAO productDAO = new ProductDAO();
+    List<Cart> cartList = dao.getCartByAccountID(accountID);
+    List<Product> productList = productDAO.getAllProduct();
+    double totalMoney = calculateTotalMoney(cartList, productList);
+    double totalMoneyVAT = calculateTotalMoneyWithVAT(totalMoney);
+    updateTongChiTieuBanHang(accountID, totalMoneyVAT, dao);
+    insertOrUpdateTongBanHangAndSoLuongDaBan(cartList, productList, dao, productDAO);
+    dao.insertInvoice(accountID, totalMoneyVAT);
+    request.getRequestDispatcher("DatHang.jsp").forward(request, response);
+}
+
+private double calculateTotalMoney(List<Cart> cartList, List<Product> productList) {
+    double totalMoney = 0;
+    for (Cart cart : cartList) {
+        for (Product product : productList) {
+            if (cart.getProductID() == product.getId()) {
+                totalMoney += (product.getPrice() * cart.getAmount());
+            }
+        }
+    }
+    return totalMoney;
+}
+
+private double calculateTotalMoneyWithVAT(double totalMoney) {
+    return totalMoney + totalMoney * 0.1;
+}
+
+private void updateTongChiTieuBanHang(int accountID, double totalMoneyVAT, DAO dao) {
+    TongChiTieuBanHang tongChiTieu = dao.checkTongChiTieuBanHangExist(accountID);
+    if (tongChiTieu == null) {
+        dao.insertTongChiTieuBanHang(accountID, totalMoneyVAT, 0);
+    } else {
+        dao.editTongChiTieu(accountID, totalMoneyVAT);
+    }
+}
+
+private void insertOrUpdateTongBanHangAndSoLuongDaBan(List<Cart> cartList, List<Product> productList, DAO dao, ProductDAO productDAO) {
+    for (Cart cart : cartList) {
+        for (Product product : productList) {
+            if (cart.getProductID() == product.getId()) {
+                double tongTienBanHangThem = product.getPrice() * cart.getAmount();
+                int sellID = productDAO.getSellIDByProductID(product.getId());
+                updateTongBanHang(sellID, tongTienBanHangThem, dao);
+                updateSoLuongDaBan(product.getId(), cart.getAmount(), dao);
+            }
+        }
+    }
+}
+
+private void updateTongBanHang(int sellID, double tongTienBanHangThem, DAO dao) {
+    TongChiTieuBanHang tongBanHang = dao.checkTongChiTieuBanHangExist(sellID);
+    if (tongBanHang == null) {
+        dao.insertTongChiTieuBanHang(sellID, 0, tongTienBanHangThem);
+    } else {
+        dao.editTongBanHang(sellID, tongTienBanHangThem);
+    }
+}
+
+private void updateSoLuongDaBan(int productID, int amount, DAO dao) {
+    SoLuongDaBan soLuongDaBan = dao.checkSoLuongDaBanExist(productID);
+    if (soLuongDaBan == null) {
+        dao.insertSoLuongDaBan(productID, amount);
+    } else {
+        dao.editSoLuongDaBan(productID, amount);
+    }
+}
+
 
     /**
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse

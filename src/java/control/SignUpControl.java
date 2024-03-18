@@ -42,7 +42,7 @@ public class SignUpControl extends HttpServlet {
             Account a = dal.checkAccountExist(user);
             if(a == null){
                 //dc signup
-                dal.singup(user, pass, email);
+                dal.signup(user, pass, email);
                 response.sendRedirect("login");
             }else{
                 //day ve trang login.jsp
